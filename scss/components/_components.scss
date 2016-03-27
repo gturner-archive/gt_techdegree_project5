@@ -16,6 +16,14 @@ HEADER STYLES
 			background-color: $themeColor;
 		}
 	}
+	.fa-bars {
+		float: right;
+		position: relative;
+		bottom: 35px;
+		@include mediaQuery($tablet) {
+			display: none;
+		}
+	}
 }
 /**********
 PORTFOLIO STYLES

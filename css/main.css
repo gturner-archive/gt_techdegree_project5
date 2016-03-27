@@ -379,12 +379,7 @@ ul {
   padding: 0; }
 
 a {
-  color: black;
-  -webkit-transition: all 0.3 ease;
-  -moz-transition: all 0.3 ease;
-  -ms-transition: all 0.3 ease;
-  -o-transition: all 0.3 ease;
-  transition: all 0.3 ease; }
+  color: black; }
   a:hover {
     color: tomato; }
 
@@ -405,7 +400,7 @@ li {
 /**********
 HEADER LAYOUT
 **********/
-.mainheader a {
+.mainheader .navlinks a {
   display: inline-block;
   width: 100%;
   height: 100%; }
@@ -431,20 +426,19 @@ HEADER LAYOUT
       margin-right: 0;
       padding-right: 0; } }
 
-.navlinks li {
-  margin-bottom: 5px;
-  padding: 10px; }
-.navlinks a {
-  -webkit-transition: all 1 ease;
-  -moz-transition: all 1 ease;
-  -ms-transition: all 1 ease;
-  -o-transition: all 1 ease;
-  transition: all 1 ease; }
+.navlinks {
+  display: none; }
+  .navlinks li {
+    margin-bottom: 5px;
+    padding: 10px; }
   .navlinks a:hover {
     font-size: 1.3em; }
-@media (min-width: 1024px) {
-  .navlinks {
-    display: inline-block; } }
+  @media (min-width: 700px) {
+    .navlinks {
+      display: block !important; } }
+  @media (min-width: 1024px) {
+    .navlinks {
+      display: inline-block !important; } }
 
 .profileimg {
   display: block;
@@ -459,7 +453,7 @@ HEADER LAYOUT
       padding-left: 20px; } }
   @media (min-width: 1024px) {
     .profileimg {
-      width: 40%; } }
+      width: 30%; } }
 
 @media (min-width: 700px) {
   .profiletext {
@@ -470,7 +464,8 @@ HEADER LAYOUT
     text-align: left; } }
 @media (min-width: 1024px) {
   .profiletext {
-    padding-right: 30px; } }
+    padding-right: 30px;
+    float: left; } }
 
 .mainintro p {
   width: 90%;
@@ -607,6 +602,13 @@ HEADER STYLES
 @media (min-width: 700px) {
   .mainnav li {
     background-color: lightsteelblue; } }
+.mainnav .fa-bars {
+  float: right;
+  position: relative;
+  bottom: 35px; }
+  @media (min-width: 700px) {
+    .mainnav .fa-bars {
+      display: none; } }
 
 /**********
 PORTFOLIO STYLES

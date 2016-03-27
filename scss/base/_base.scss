@@ -20,7 +20,6 @@ ul {
 
 a {
 	color: $links;
-	@include transitions(all 0.3 ease);
 	&:hover {
     	color: $linkHover;
 	}

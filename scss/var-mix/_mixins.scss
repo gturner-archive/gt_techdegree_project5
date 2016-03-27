@@ -16,10 +16,7 @@
 
 }
 
-@mixin transitions($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
 }

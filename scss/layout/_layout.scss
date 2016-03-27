@@ -2,10 +2,9 @@
 HEADER LAYOUT
 **********/
 
-.mainheader a {
+.mainheader .navlinks a {
     display: inline-block;
-    width: 100%;
-    height: 100%;
+	@include size(100%);
 }
 
 .mainnav {
@@ -35,18 +34,21 @@ HEADER LAYOUT
 }
 
 .navlinks {
+	display: none;
 	li {
 		margin-bottom: 5px;
 		padding: 10px;
     }
     a {
-    	@include transitions(all 1.0 ease);
     	&:hover {
     		font-size: 1.3em;
     	}
     }
+    @include mediaQuery($tablet) {
+    	display: block !important;
+    }
     @include mediaQuery($desktop) {
-    	display: inline-block;
+    	display: inline-block !important;
     }
 }
 
@@ -62,7 +64,7 @@ HEADER LAYOUT
         padding-left: 20px;
     }
     @include mediaQuery($desktop) {
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -76,6 +78,7 @@ HEADER LAYOUT
     }
     @include mediaQuery($desktop) {
     	padding-right: 30px;
+    	float: left;
     }
 }
 
