@@ -1,0 +1,245 @@
+/**********
+HEADER LAYOUT
+**********/
+
+.mainheader a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.mainnav {
+	@extend .container;
+    text-align: center;
+    @include mediaQuery($desktop) {
+    	display: inline-block;
+        float: right;
+        width: 100%;
+        text-align: right;
+    }
+    h1 {
+		margin: 0;
+		padding: 20px 0 10px;
+	}
+	li {
+		@include mediaQuery($tablet) {
+		    display: inline-block;
+        	margin: 0 20px;
+        	padding: 10px 30px;
+		}
+		@include mediaQuery($desktop) {
+		    margin-right: 0;
+        	padding-right: 0;
+		}
+	}
+}
+
+.navlinks {
+	li {
+		margin-bottom: 5px;
+		padding: 10px;
+    }
+    @include mediaQuery($desktop) {
+    	display: inline-block;
+    }
+}
+
+.mainintro {
+    text-align: center;
+}
+
+.profileimg {
+    display: block;
+    max-width: 70%;
+    margin: 40px auto 0;
+    @include mediaQuery($tablet) {
+        display: inline-block;
+        float: right;
+        padding: 0 0 40px 0;
+        width: 40%;
+        padding-left: 20px;
+    }
+    @include mediaQuery($desktop) {
+        width: 40%;
+    }
+}
+
+.profiletext {
+    @include mediaQuery($tablet) {
+        display: inline-block;
+        float: right;
+        padding: 0 0 40px 0;
+        max-width: 60%;
+        text-align: left
+    }
+    @include mediaQuery($desktop) {
+    	padding-right: 30px;
+    }
+}
+
+.mainintro {
+	p {
+		width: 90%;
+		margin: 40px auto;
+		padding-bottom: 40px;
+    }
+}
+
+.navname {
+	@include mediaQuery($desktop) {
+    	float: left;
+    }
+}
+
+/*********l*
+PORTFOLIO LAYOUT
+**********/
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    @include mediaQuery($tablet) {
+    	width: 95%;
+    }
+}
+
+.container2 {
+	@include mediaQuery($tablet) {
+		width: 95%;
+		margin: 0 auto;
+    }
+}
+
+.mainportfolio {
+	@include mediaQuery($tablet) {
+	    padding-bottom: 30px;
+	}
+	h3 {
+    	@extend .mainintro;
+    	@include mediaQuery($tablet) {
+    		padding-top: 20px;
+    	}
+    }
+}
+
+.portfolioimg {
+    display: block;
+    max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.portdisplays {
+     @extend .mainintro;
+     @include mediaQuery($tablet) {
+     	display: inline-block;
+        width: 50%;
+        float: left;
+        height: 450px;
+        padding-left: 5px;
+        padding-right: 5px;
+     }
+     @include mediaQuery($desktop) {
+        width: 33%;
+     }
+}
+
+.mainportfolio {
+    margin-bottom: 40px;
+}
+
+.porttext1 {
+	@include mediaQuery($tablet) {
+    	font-size: 1em;
+    }
+}
+    
+.porttext2 {
+	@include mediaQuery($tablet) {
+		font-size: .95em;
+		width: 80%;
+		margin: 0 auto;
+    }
+}
+
+/**********
+CONTACT LAYOUT
+**********/
+
+.maincontact {
+    @extend .mainintro;
+    padding-top: 40px;
+}
+
+.phone,
+.email {
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+.contactdescription {
+	@include mediaQuery($tablet) {
+		width: 60%;
+		margin: 0 auto;
+    }
+}
+
+.contactborder {
+	@include mediaQuery($desktop) {
+   		padding-bottom: 40px;
+    }
+}
+/**********
+FOOTER LAYOUT
+**********/
+
+.mainfooter {
+    padding: 10px 0;
+    @include mediaQuery($tablet) {
+    	padding-bottom: 10px;
+    }
+}
+
+.footername,
+.footertop {
+    display: inline-block;
+    @include mediaQuery($tablet) {
+    	padding-bottom: 40px;
+    }
+}
+
+.footertop {
+    float: right;
+    display: inline;
+    @include mediaQuery($tablet) {
+    	display: none;
+    }
+}
+    
+.footerlinks {
+    display: none;
+    @include mediaQuery($tablet) {
+    	display: inline-block;
+    	float: right;
+    }
+    li {
+    	@include mediaQuery($tablet) {
+    	    float: left;
+        	padding: 0 20px;
+    	}
+    }
+}
+
+/**********
+CLEARFIX
+**********/
+
+.clearfix {
+	&:after {
+		@include mediaQuery($tablet) {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+}

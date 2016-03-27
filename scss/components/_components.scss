@@ -1,0 +1,54 @@
+/**********
+HEADER STYLES
+**********/
+
+.mainheader {
+    background-color: $themeColor;
+}
+
+.navlinks li {
+    background-color: $text;
+}
+
+.mainnav {
+	li {
+		@include mediaQuery($tablet){
+			background-color: $themeColor;
+		}
+	}
+}
+/**********
+PORTFOLIO STYLES
+**********/
+
+header p {
+    color: $text;
+}
+
+/**********
+CONTACT STYLES
+**********/
+
+.maincontact {
+    color: $text;
+}
+
+.maincontact {
+    background-color: $themeColor;
+}
+
+.contactborder {
+    border-bottom: 1px solid $links;
+}
+
+/**********
+FOOTER STYLES
+**********/
+
+.mainfooter {
+    color: $text;
+}
+
+.footerbackground {
+    background-color: $themeColor;
+}

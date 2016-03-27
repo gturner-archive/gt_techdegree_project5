@@ -1,0 +1,58 @@
+/**********
+BASE STYLES
+**********/
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+	&:link {
+    color: $links;
+    }
+    &:visited {
+    color: $links;
+	}
+	&:hover {
+    color: $linkHover;
+	}
+}
+
+h2 {
+    font-family: $arimo;
+}
+
+h1 {
+    @extend h2;
+    color: $text;
+}
+
+
+h3 {
+    @extend h2;
+}
+
+p {
+    font-family: $arimo;
+    font-size: $pSize;
+    line-height: 140%;
+    font-weight: lighter;
+}
+
+li {
+    font-family: $arimo;
+    font-weight: 700;
+    font-size: $liSize;
+}

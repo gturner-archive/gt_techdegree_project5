@@ -1,0 +1,17 @@
+@mixin mediaQuery($constraint) {
+
+  @if $constraint == $tablet {
+
+    @media #{$tablet} {
+      @content;
+    }
+
+  } @else if $constraint == $desktop {
+
+    @media #{$desktop} {
+      @content;
+    }
+
+  } 
+
+}
