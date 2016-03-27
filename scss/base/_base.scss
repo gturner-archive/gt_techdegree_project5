@@ -19,29 +19,25 @@ ul {
 }
 
 a {
-	&:link {
-    color: $links;
-    }
-    &:visited {
-    color: $links;
-	}
+	color: $links;
+	@include transitions(all 0.3 ease);
 	&:hover {
-    color: $linkHover;
+    	color: $linkHover;
 	}
 }
 
 h2 {
-    font-family: $arimo;
+    @extend %family;
 }
 
 h1 {
-    @extend h2;
+    @extend %family;
     color: $text;
 }
 
 
 h3 {
-    @extend h2;
+    @extend %family;
 }
 
 p {

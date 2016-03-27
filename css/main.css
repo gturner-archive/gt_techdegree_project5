@@ -353,6 +353,16 @@ td,
 th {
   padding: 0; }
 
+h2, h1, h3 {
+  font-family: "Arimo", sans-serif; }
+
+.mainnav, .container {
+  width: 90%;
+  margin: 0 auto; }
+
+.mainintro, .mainportfolio h3, .portdisplays, .maincontact {
+  text-align: center; }
+
 /**********
 BASE STYLES
 **********/
@@ -368,15 +378,15 @@ li {
 ul {
   padding: 0; }
 
-a:link {
-  color: black; }
-a:visited {
-  color: black; }
-a:hover {
-  color: tomato; }
-
-h2, h1, h3 {
-  font-family: "Arimo", sans-serif; }
+a {
+  color: black;
+  -webkit-transition: all 0.3 ease;
+  -moz-transition: all 0.3 ease;
+  -ms-transition: all 0.3 ease;
+  -o-transition: all 0.3 ease;
+  transition: all 0.3 ease; }
+  a:hover {
+    color: tomato; }
 
 h1 {
   color: white; }
@@ -424,12 +434,17 @@ HEADER LAYOUT
 .navlinks li {
   margin-bottom: 5px;
   padding: 10px; }
+.navlinks a {
+  -webkit-transition: all 1 ease;
+  -moz-transition: all 1 ease;
+  -ms-transition: all 1 ease;
+  -o-transition: all 1 ease;
+  transition: all 1 ease; }
+  .navlinks a:hover {
+    font-size: 1.3em; }
 @media (min-width: 1024px) {
   .navlinks {
     display: inline-block; } }
-
-.mainintro, .mainportfolio h3, .portdisplays, .maincontact {
-  text-align: center; }
 
 .profileimg {
   display: block;
@@ -457,7 +472,7 @@ HEADER LAYOUT
   .profiletext {
     padding-right: 30px; } }
 
-.mainintro p, .mainportfolio h3 p, .portdisplays p, .maincontact p {
+.mainintro p {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 40px; }
@@ -469,12 +484,9 @@ HEADER LAYOUT
 /*********l*
 PORTFOLIO LAYOUT
 **********/
-.container, .mainnav {
-  width: 90%;
-  margin: 0 auto; }
-  @media (min-width: 700px) {
-    .container, .mainnav {
-      width: 95%; } }
+@media (min-width: 700px) {
+  .container {
+    width: 95%; } }
 
 @media (min-width: 700px) {
   .container2 {

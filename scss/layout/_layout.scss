@@ -9,7 +9,7 @@ HEADER LAYOUT
 }
 
 .mainnav {
-	@extend .container;
+	@extend %contain;
     text-align: center;
     @include mediaQuery($desktop) {
     	display: inline-block;
@@ -39,13 +39,15 @@ HEADER LAYOUT
 		margin-bottom: 5px;
 		padding: 10px;
     }
+    a {
+    	@include transitions(all 1.0 ease);
+    	&:hover {
+    		font-size: 1.3em;
+    	}
+    }
     @include mediaQuery($desktop) {
     	display: inline-block;
     }
-}
-
-.mainintro {
-    text-align: center;
 }
 
 .profileimg {
@@ -78,10 +80,11 @@ HEADER LAYOUT
 }
 
 .mainintro {
+	@extend %centeritems;
 	p {
 		width: 90%;
 		margin: 40px auto;
-		padding-bottom: 40px;
+		padding-bottom: $addPadding;
     }
 }
 
@@ -96,16 +99,15 @@ PORTFOLIO LAYOUT
 **********/
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+	@extend %contain;
     @include mediaQuery($tablet) {
-    	width: 95%;
+    	width: $containers;
     }
 }
 
 .container2 {
 	@include mediaQuery($tablet) {
-		width: 95%;
+		width: $containers;
 		margin: 0 auto;
     }
 }
@@ -115,7 +117,7 @@ PORTFOLIO LAYOUT
 	    padding-bottom: 30px;
 	}
 	h3 {
-    	@extend .mainintro;
+    	@extend %centeritems;
     	@include mediaQuery($tablet) {
     		padding-top: 20px;
     	}
@@ -130,7 +132,7 @@ PORTFOLIO LAYOUT
 }
 
 .portdisplays {
-     @extend .mainintro;
+     @extend %centeritems;
      @include mediaQuery($tablet) {
      	display: inline-block;
         width: 50%;
@@ -167,8 +169,8 @@ CONTACT LAYOUT
 **********/
 
 .maincontact {
-    @extend .mainintro;
-    padding-top: 40px;
+    @extend %centeritems;
+    padding-top: $addPadding;
 }
 
 .phone,
@@ -186,7 +188,7 @@ CONTACT LAYOUT
 
 .contactborder {
 	@include mediaQuery($desktop) {
-   		padding-bottom: 40px;
+   		padding-bottom: $addPadding;
     }
 }
 /**********
@@ -204,7 +206,7 @@ FOOTER LAYOUT
 .footertop {
     display: inline-block;
     @include mediaQuery($tablet) {
-    	padding-bottom: 40px;
+    	padding-bottom: $addPadding;
     }
 }
 

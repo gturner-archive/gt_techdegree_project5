@@ -17,3 +17,24 @@ $liSize: 1.2em;
 // Media Queries
 $tablet: "(min-width: 700px)";
 $desktop: "(min-width: 1024px)";
+
+// Container Size
+$containers: 95%;
+
+// Padding
+$addPadding: 40px;
+
+// Placeholder Selectors
+
+%family {
+	font-family: $arimo;
+}
+
+%contain {
+	width: 90%;
+    margin: 0 auto;
+}
+
+%centeritems {
+	text-align: center;
+}
