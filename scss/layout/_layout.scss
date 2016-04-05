@@ -41,7 +41,7 @@ HEADER LAYOUT
     }
     a {
     	&:hover {
-    		font-size: 1.3em;
+    		font-size: $aSize;
     	}
     }
     @include mediaQuery($tablet) {
@@ -155,13 +155,13 @@ PORTFOLIO LAYOUT
 
 .porttext1 {
 	@include mediaQuery($tablet) {
-    	font-size: 1em;
+    	font-size: $defSize;
     }
 }
     
 .porttext2 {
 	@include mediaQuery($tablet) {
-		font-size: .95em;
+		font-size: $smallSize;
 		width: 80%;
 		margin: 0 auto;
     }
